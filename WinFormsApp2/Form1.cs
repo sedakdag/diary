@@ -2,78 +2,47 @@
 using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using WinFormsApp2.MODEL;
 
 namespace WinFormsApp2
 {
     public partial class Form1 : Form
     {
+        List<kiþi> kiþilerim = new List<kiþi>();
         public Form1()
         {
             InitializeComponent();
         }
 
-        public static class DatabaseHelper
-        {
-            // Veritabaný baðlantý dizgisini sabit olarak tutmak yerine, yapýlandýrma dosyasýndan almak daha iyi bir yöntemdir.
-            private static readonly string connectionString = "Data Source=DESKTOP-CQ34R50\\MSSQLSERVER01;Initial Catalog=kullanýcýlar;Integrated Security=True;Encrypt=False";
 
-            public static SqlConnection GetConnection()
+        private void buttongrs_Click_1(object sender, EventArgs e)
+        {
+            string kullanýcýadi = "";
+            int sifre;
+            kullanýcýadi = textBoxkullanýcý.Text;
+            sifre = Convert.ToInt32( textBoxsifre.Text);
+            foreach(kiþi Kiþi in kiþilerim)
             {
-                return new SqlConnection(connectionString);
+                if(kullanýcýadi.ToLower()==Kiþi.getkulisim() && sifre==Kiþi.getkulþifre())
+                {
+                    Form2 form2 = new Form2();
+                    form2.Show();
+                    this.Hide();
+                }
             }
         }
 
         private void buttonkyt_Click(object sender, EventArgs e)
         {
-            // Kayýt iþlemi için gerekli kod burada yazýlabilir.
+
         }
 
-        private void buttongiris_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            string kulad = textBoxkullanýcý.Text.Trim();
-            string kulþifre = textBoxsifre.Text.Trim();
-
-            if (string.IsNullOrWhiteSpace(kulad) || string.IsNullOrWhiteSpace(kulþifre))
-            {
-                MessageBox.Show("Kullanýcý adý ve þifre boþ olamaz.");
-                return;
-            }
-
-            try
-            {
-                using (var connection = DatabaseHelper.GetConnection())
-                {
-                    connection.Open();
-
-                    // Parametreli sorgu ile SQL enjeksiyonu önlenir.
-                    string query = "SELECT kulid FROM users WHERE kulad = @kulad AND kulþifre = @kulþifre";
-                    using (var command = new SqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@kulad", kulad);
-                        command.Parameters.AddWithValue("@kulþifre", kulþifre);
-
-                        var result = command.ExecuteScalar();
-                        if (result != null)
-                        {
-                            int kulid = Convert.ToInt32(result);
-                            MessageBox.Show($"Giriþ baþarýlý! Kullanýcý ID: {kulid}");
-
-                            // Kullanýcýyý baþka bir forma yönlendirme iþlemi yapýlabilir.
-                            // Örneðin: new ProfileForm().Show(); this.Hide();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Giriþ baþarýsýz. Kullanýcý adý veya þifre yanlýþ.");
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                // Hata durumunda mesaj görüntülenir.
-                MessageBox.Show($"Bir hata oluþtu: {ex.Message}");
-            }
+            kiþilerim.Add(new kiþi(1, "sýla", 123, "sila@gmail.com"));
+            kiþilerim.Add(new kiþi(2,"seda" ,456, "seda@gmail.com"));
+            kiþilerim.Add(new kiþi(3, "dilara", 789, "dilara@gmail.com"));
+            kiþilerim.Add(new kiþi(4, "yaprak", 101, "yaprak@gmail.com"));
         }
     }
 }
-
