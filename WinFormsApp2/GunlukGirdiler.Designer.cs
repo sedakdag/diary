@@ -88,6 +88,7 @@
             buttonKaydet.TabIndex = 4;
             buttonKaydet.Text = "Kaydet";
             buttonKaydet.UseVisualStyleBackColor = false;
+            buttonKaydet.Click += buttonKaydet_Click;
             // 
             // gunlukGirdi
             // 

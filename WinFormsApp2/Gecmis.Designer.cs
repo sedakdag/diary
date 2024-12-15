@@ -28,12 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Gecmis";
+            panel1 = new Panel();
+            SuspendLayout();
+            // 
+            // panel1
+            // 
+            panel1.AutoScroll = true;
+            panel1.Location = new Point(-2, -1);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(871, 813);
+            panel1.TabIndex = 0;
+            // 
+            // Gecmis
+            // 
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 192, 192);
+            ClientSize = new Size(866, 809);
+            Controls.Add(panel1);
+            Name = "Gecmis";
+            Text = "Geçmis";
+            Load += Gecmis_Load;
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Panel panel1;
     }
 }

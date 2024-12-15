@@ -37,3 +37,4 @@ C:\Users\35sed\source\repos\diary\WinFormsApp2\obj\Debug\net8.0-windows\refint\W
 C:\Users\35sed\source\repos\diary\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.pdb
 C:\Users\35sed\source\repos\diary\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.GunlukGirdiler.resources
 C:\Users\35sed\source\repos\diary\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.Properties.Resources.resources
+C:\Users\35sed\source\repos\diary\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.Gecmis.resources
