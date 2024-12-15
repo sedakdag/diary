@@ -5,13 +5,16 @@
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Gecmis.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GirisSayfasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GunlukGirdiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GununSozu.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

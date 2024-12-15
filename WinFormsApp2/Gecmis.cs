@@ -19,7 +19,7 @@ namespace WinFormsApp2
 
         private void Gecmis_Load(object sender, EventArgs e)
         {
-            string dosyaYolu = "girdiler.txt";
+            string dosyaYolu = Path.Combine(Application.StartupPath, "girdiler.txt");
 
             if (!File.Exists(dosyaYolu)) //Eğer girdiler.txt dosyası henüz oluşmadıysa
             {
@@ -45,10 +45,22 @@ namespace WinFormsApp2
                 Label labelTarih = new Label
                 {
                     Text = tarih_RuhHali,
-                    AutoSize = true,
-                    Font = new System.Drawing.Font()
-                }
+                    AutoSize = true, //Metne göre boyutlanır
+                    Font = new System.Drawing.Font("Franklin Gothic Medium", 12, System.Drawing.FontStyle.Bold),
+                    Location = new System.Drawing.Point(10, yKoordinat)
+                };
 
+                Label labelAktivite = new Label
+                {
+                    Text = gunlukAktivite,
+                    AutoSize = true, //Metne göre boyutlanır
+                    Font = new System.Drawing.Font("Franklin Gothic Medium", 10, System.Drawing.FontStyle.Italic),
+                    Location = new System.Drawing.Point(10, yKoordinat + 20) //Tarih label'ının altına yazar
+                };
+
+                this.Controls.Add(labelAktivite); //Form'a ekler
+
+                yKoordinat += 60; //İki label arasındaki boşluk için Y koordinatını ayarlar
 
 
             }

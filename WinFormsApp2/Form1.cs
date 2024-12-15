@@ -1,4 +1,4 @@
-
+ï»¿
 using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -8,7 +8,7 @@ namespace WinFormsApp2
 {
     public partial class Form1 : Form
     {
-        List<kiþi> kiþilerim = new List<kiþi>();
+        List<kisi> kisilerim = new List<kisi>();
         public Form1()
         {
             InitializeComponent();
@@ -17,17 +17,17 @@ namespace WinFormsApp2
 
         private void buttongrs_Click_1(object sender, EventArgs e)
         {
-            string kullanýcýadi = "";
+            string kullanÄ±cÄ±adÄ± = "";
 
             int sifre;
-            kullanýcýadi = textBoxkullanýcý.Text;
+            kullanÄ±cÄ±adÄ± = textBoxkullanÄ±cÄ±.Text;
             sifre = Convert.ToInt32( textBoxsifre.Text);
-            foreach(kiþi Kiþi in kiþilerim)
+            foreach(kisi kisi in kisilerim)
             {
-                if(kullanýcýadi.ToLower()==Kiþi.getkulisim() && sifre==Kiþi.getkulþifre())
+                if(kullanÄ±cÄ±adÄ±.ToLower()== kisi.getkulisim() && sifre== kisi.getkulsifre())
                 {
-                    Form2 form2 = new Form2();
-                    form2.Show();
+                    GirisSayfasi girisSayfasi = new GirisSayfasi();
+                    girisSayfasi.Show();
                     this.Hide();
                 }
             }
@@ -40,10 +40,10 @@ namespace WinFormsApp2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            kiþilerim.Add(new kiþi(1, "sýla", 123, "sila@gmail.com"));
-            kiþilerim.Add(new kiþi(2,"seda" ,456, "seda@gmail.com"));
-            kiþilerim.Add(new kiþi(3, "dilara", 789, "dilara@gmail.com"));
-            kiþilerim.Add(new kiþi(4, "yaprak", 101, "yaprak@gmail.com"));
+            kisilerim.Add(new kisi(1, "sÄ±la", 123, "sila@gmail.com"));
+            kisilerim.Add(new kisi(2,"seda" ,456, "seda@gmail.com"));
+            kisilerim.Add(new kisi(3, "dilara", 789, "dilara@gmail.com"));
+            kisilerim.Add(new kisi(4, "yaprak", 101, "yaprak@gmail.com"));
         }
     }
 }
