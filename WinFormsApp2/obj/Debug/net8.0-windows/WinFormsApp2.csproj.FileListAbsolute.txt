@@ -23,3 +23,17 @@ C:\Yeni klasör\WinFormsApp2\WinFormsApp2\bin\Debug\net8.0-windows\runtimes\unix
 C:\Yeni klasör\WinFormsApp2\WinFormsApp2\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
 C:\Yeni klasör\WinFormsApp2\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.csproj.AssemblyReference.cache
 C:\Yeni klasör\WinFormsApp2\WinFormsApp2\obj\Debug\net8.0-windows\WinForms.CF340A35.Up2Date
+C:\Users\35sed\source\repos\diary\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.csproj.AssemblyReference.cache
+C:\Users\35sed\source\repos\diary\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.Form1.resources
+C:\Users\35sed\source\repos\diary\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.Form2.resources
+C:\Users\35sed\source\repos\diary\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.csproj.GenerateResource.cache
+C:\Users\35sed\source\repos\diary\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\35sed\source\repos\diary\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.AssemblyInfoInputs.cache
+C:\Users\35sed\source\repos\diary\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.AssemblyInfo.cs
+C:\Users\35sed\source\repos\diary\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.csproj.CoreCompileInputs.cache
+C:\Users\35sed\source\repos\diary\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.sourcelink.json
+C:\Users\35sed\source\repos\diary\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.dll
+C:\Users\35sed\source\repos\diary\WinFormsApp2\obj\Debug\net8.0-windows\refint\WinFormsApp2.dll
+C:\Users\35sed\source\repos\diary\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.pdb
+C:\Users\35sed\source\repos\diary\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.GunlukGirdiler.resources
+C:\Users\35sed\source\repos\diary\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.Properties.Resources.resources

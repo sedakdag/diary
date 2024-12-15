@@ -74,7 +74,6 @@ namespace WinFormsApp2
             labelkullanıcı.Size = new Size(94, 17);
             labelkullanıcı.TabIndex = 2;
             labelkullanıcı.Text = "Kullanıcı adı";
-            labelkullanıcı.Click += label1_Click;
             // 
             // labelsifre
             // 
@@ -85,7 +84,7 @@ namespace WinFormsApp2
             labelsifre.Size = new Size(41, 17);
             labelsifre.TabIndex = 2;
             labelsifre.Text = "Şifre";
-            labelsifre.Click += label1_Click;
+            
             // 
             // panel1
             // 
@@ -95,7 +94,7 @@ namespace WinFormsApp2
             panel1.Name = "panel1";
             panel1.Size = new Size(615, 74);
             panel1.TabIndex = 3;
-            panel1.Paint += panel1_Paint;
+            
             // 
             // buttongiris
             // 
@@ -125,7 +124,7 @@ namespace WinFormsApp2
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "GİRİŞİ SAYFASI";
-            Load += Form1_Load;
+            
             ResumeLayout(false);
             PerformLayout();
         }
