@@ -29,25 +29,14 @@ namespace WinFormsApp2
         /// </summary>
         private void InitializeComponent()
         {
-            buttonkyt = new Button();
             textBoxkullanıcı = new TextBox();
             textBoxsifre = new TextBox();
             labelkullanıcı = new Label();
             labelsifre = new Label();
             panel1 = new Panel();
-            buttongiris = new Button();
+            buttongrs = new Button();
+            buttonkyt = new Button();
             SuspendLayout();
-            // 
-            // buttonkyt
-            // 
-            buttonkyt.Location = new Point(207, 197);
-            buttonkyt.Margin = new Padding(4, 3, 4, 3);
-            buttonkyt.Name = "buttonkyt";
-            buttonkyt.Size = new Size(96, 26);
-            buttonkyt.TabIndex = 0;
-            buttonkyt.Text = "Kayıt Ol";
-            buttonkyt.UseVisualStyleBackColor = true;
-            buttonkyt.Click += buttonkyt_Click;
             // 
             // textBoxkullanıcı
             // 
@@ -84,7 +73,6 @@ namespace WinFormsApp2
             labelsifre.Size = new Size(41, 17);
             labelsifre.TabIndex = 2;
             labelsifre.Text = "Şifre";
-            
             // 
             // panel1
             // 
@@ -94,37 +82,45 @@ namespace WinFormsApp2
             panel1.Name = "panel1";
             panel1.Size = new Size(615, 74);
             panel1.TabIndex = 3;
-            
             // 
-            // buttongiris
+            // buttongrs
             // 
-            buttongiris.Location = new Point(73, 197);
-            buttongiris.Margin = new Padding(4, 3, 4, 3);
-            buttongiris.Name = "buttongiris";
-            buttongiris.Size = new Size(96, 26);
-            buttongiris.TabIndex = 0;
-            buttongiris.Text = "Giriş Yap";
-            buttongiris.UseVisualStyleBackColor = true;
-            buttongiris.Click += buttonkyt_Click;
+            buttongrs.Location = new Point(58, 188);
+            buttongrs.Name = "buttongrs";
+            buttongrs.Size = new Size(117, 32);
+            buttongrs.TabIndex = 4;
+            buttongrs.Text = "GİRİŞ YAP";
+            buttongrs.UseVisualStyleBackColor = true;
+            buttongrs.Click += buttongrs_Click_1;
+            // 
+            // buttonkyt
+            // 
+            buttonkyt.Location = new Point(181, 188);
+            buttonkyt.Name = "buttonkyt";
+            buttonkyt.Size = new Size(117, 32);
+            buttonkyt.TabIndex = 5;
+            buttonkyt.Text = "KAYIT OL";
+            buttonkyt.UseVisualStyleBackColor = true;
+            buttonkyt.Click += buttonkyt_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(9F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(385, 271);
+            Controls.Add(buttonkyt);
+            Controls.Add(buttongrs);
             Controls.Add(panel1);
             Controls.Add(labelsifre);
             Controls.Add(labelkullanıcı);
             Controls.Add(textBoxsifre);
             Controls.Add(textBoxkullanıcı);
-            Controls.Add(buttongiris);
-            Controls.Add(buttonkyt);
             Font = new Font("Arial", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 162);
             Margin = new Padding(4, 3, 4, 3);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "GİRİŞİ SAYFASI";
-            
+            Text = "GİRİŞ SAYFASI";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -134,14 +130,13 @@ namespace WinFormsApp2
            
         }
 
-        #endregion
-
-        private Button buttonkyt;
+#endregion
         private TextBox textBoxkullanıcı;
         private TextBox textBoxsifre;
         private Label labelkullanıcı;
         private Label labelsifre;
         private Panel panel1;
-        private Button buttongiris;
+        private Button buttongrs;
+        private Button buttonkyt;
     }
 }
