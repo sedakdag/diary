@@ -27,7 +27,21 @@ namespace WinFormsApp2
 
         }
 
-        private void buttongunlukgirdi_Click(object sender, EventArgs e)
+
+
+        private void buttongunlukgırdı_Click(object sender, EventArgs e)
+        {
+            GunlukGirdiler gunlukGirdiler = new GunlukGirdiler();
+            gunlukGirdiler.Show();
+            this.Hide();
+        }
+
+        private void buttongununsozu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             GunlukGirdiler gunlukGirdiler = new GunlukGirdiler();
             gunlukGirdiler.Show();

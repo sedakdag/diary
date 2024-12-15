@@ -1,4 +1,5 @@
-﻿namespace WinFormsApp2
+﻿
+namespace WinFormsApp2
 {
     partial class Form2
     {
@@ -40,20 +41,16 @@
             buttonprofil = new Button();
             panel1 = new Panel();
             labelPROFİL = new Label();
+            button1 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // buttongunlukgirdi
             // 
-            buttongunlukgirdi.BackColor = Color.LavenderBlush;
-            buttongunlukgirdi.Location = new Point(163, 106);
-            buttongunlukgirdi.Margin = new Padding(4);
+            buttongunlukgirdi.Location = new Point(0, 0);
             buttongunlukgirdi.Name = "buttongunlukgirdi";
-            buttongunlukgirdi.Size = new Size(266, 56);
-            buttongunlukgirdi.TabIndex = 0;
-            buttongunlukgirdi.Text = "Günlük Girdileri";
-            buttongunlukgirdi.UseVisualStyleBackColor = false;
-            buttongunlukgirdi.Click += buttongunlukgirdi_Click;
+            buttongunlukgirdi.Size = new Size(75, 23);
+            buttongunlukgirdi.TabIndex = 3;
             // 
             // buttongununsozu
             // 
@@ -65,6 +62,7 @@
             buttongununsozu.TabIndex = 0;
             buttongununsozu.Text = "Günün Sözü";
             buttongununsozu.UseVisualStyleBackColor = false;
+            buttongununsozu.Click += buttongununsozu_Click;
             // 
             // buttontodo
             // 
@@ -173,16 +171,29 @@
             labelPROFİL.Location = new Point(137, 37);
             labelPROFİL.Margin = new Padding(4, 0, 4, 0);
             labelPROFİL.Name = "labelPROFİL";
-            labelPROFİL.Size = new Size(494, 69);
+            labelPROFİL.Size = new Size(301, 46);
             labelPROFİL.TabIndex = 0;
             labelPROFİL.Text = "SEKME GEZGİNİ";
             // 
+            // button1
+            // 
+            button1.AllowDrop = true;
+            button1.AutoEllipsis = true;
+            button1.Location = new Point(222, 105);
+            button1.Name = "button1";
+            button1.Size = new Size(180, 57);
+            button1.TabIndex = 4;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Form2
             // 
-            AutoScaleDimensions = new SizeF(15F, 28F);
+            AutoScaleDimensions = new SizeF(10F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 192, 192);
             ClientSize = new Size(611, 749);
+            Controls.Add(button1);
             Controls.Add(panel1);
             Controls.Add(buttonprofil);
             Controls.Add(buttonfitness);
@@ -204,6 +215,11 @@
             ResumeLayout(false);
         }
 
+        private void buttongunlukgirdi_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
         private Button buttongunlukgirdi;
@@ -218,5 +234,6 @@
         private Button buttonprofil;
         private Panel panel1;
         private Label labelPROFİL;
+        private Button button1;
     }
 }
