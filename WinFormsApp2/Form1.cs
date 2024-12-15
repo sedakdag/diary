@@ -18,6 +18,7 @@ namespace WinFormsApp2
         private void buttongrs_Click_1(object sender, EventArgs e)
         {
             string kullanýcýadi = "";
+
             int sifre;
             kullanýcýadi = textBoxkullanýcý.Text;
             sifre = Convert.ToInt32( textBoxsifre.Text);
