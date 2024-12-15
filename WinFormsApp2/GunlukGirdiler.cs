@@ -65,11 +65,13 @@ namespace WinFormsApp2
             {
                 ruhHali = "Şaşkın";
             }
-            else if (checkUzgun.Checked) {
+            else if (checkUzgun.Checked)
+            {
                 ruhHali = "Üzgün";
             }
 
-            if ( (string.IsNullOrEmpty(gunlukAktivite) ) || (string.IsNullOrEmpty(ruhHali) ) ) {
+            if ((string.IsNullOrEmpty(gunlukAktivite)) || (string.IsNullOrEmpty(ruhHali)))
+            {
                 MessageBox.Show("Tüm alanları doldurmadınız veya bir ruh hali seçmediniz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning); //Kullanıcı günlük girdisini doldurmazsa veya ruh halini seçmezse uyarı
                 return;
             }
@@ -78,16 +80,16 @@ namespace WinFormsApp2
 
             string dosyaYolu = "girdiler.txt";
             string satir = $"{tarih} - {ruhHali}: {gunlukAktivite}";
-            File.AppendAllText( dosyaYolu, satir + Environment.NewLine);
+            File.AppendAllText(dosyaYolu, satir + Environment.NewLine);
 
             MessageBox.Show("Günlük başarıyla güncellendi!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             //Bir sonraki girdi için alanları sıfırlama
 
             gunlukGirdi.Clear();
-            foreach(Control control in this.Controls)
+            foreach (Control control in this.Controls)
             {
-                if(control is CheckBox checkBox)
+                if (control is CheckBox checkBox)
                 {
                     checkBox.Checked = false;
                 }
@@ -95,5 +97,12 @@ namespace WinFormsApp2
 
 
         }
+
+        private void GunlukGirdiler_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

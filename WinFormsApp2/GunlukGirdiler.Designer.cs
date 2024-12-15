@@ -352,7 +352,8 @@
             ClientSize = new Size(991, 622);
             Controls.Add(panel_gunlukGirdi);
             Name = "GunlukGirdiler";
-            Text = "Günlük Girdiler";
+            Text = "Günlük Girdileri";
+            Load += GunlukGirdiler_Load;
             ((System.ComponentModel.ISupportInitialize)pictureMutlu).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureNormal).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureUykulu).EndInit();

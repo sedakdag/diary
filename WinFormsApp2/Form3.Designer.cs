@@ -1,4 +1,5 @@
 ﻿
+
 namespace WinFormsApp2
 {
     partial class Form3
@@ -27,76 +28,82 @@ namespace WinFormsApp2
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        private void InitializeComponent(object v)
         {
-            this.txtAd = new System.Windows.Forms.TextBox();
-            this.txtSoyad = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtKullaniciAdi = new System.Windows.Forms.TextBox();
-            this.txtSifre = new System.Windows.Forms.TextBox();
-            this.btnKaydet = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            txtAd = new TextBox();
+            txtSoyad = new TextBox();
+            txtEmail = new TextBox();
+            txtKullaniciAdi = new TextBox();
+            txtSifre = new TextBox();
+            btnKaydet = new Button();
+            SuspendLayout();
             // 
             // txtAd
             // 
-            this.txtAd.Location = new System.Drawing.Point(130, 61);
-            this.txtAd.Name = "txtAd";
-            this.txtAd.Size = new System.Drawing.Size(100, 23);
-            this.txtAd.TabIndex = 0;
+            txtAd.Location = new Point(107, 43);
+            txtAd.Name = "txtAd";
+            txtAd.Size = new Size(100, 23);
+            txtAd.TabIndex = 0;
+            txtAd.TextChanged += txtAd_TextChanged;
             // 
             // txtSoyad
             // 
-            this.txtSoyad.Location = new System.Drawing.Point(130, 110);
-            this.txtSoyad.Name = "txtSoyad";
-            this.txtSoyad.Size = new System.Drawing.Size(100, 23);
-            this.txtSoyad.TabIndex = 1;
+            txtSoyad.Location = new Point(107, 92);
+            txtSoyad.Name = "txtSoyad";
+            txtSoyad.Size = new Size(100, 23);
+            txtSoyad.TabIndex = 1;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(130, 182);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(100, 23);
-            this.txtEmail.TabIndex = 2;
+            txtEmail.Location = new Point(107, 164);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(100, 23);
+            txtEmail.TabIndex = 2;
             // 
             // txtKullaniciAdi
             // 
-            this.txtKullaniciAdi.Location = new System.Drawing.Point(130, 253);
-            this.txtKullaniciAdi.Name = "txtKullaniciAdi";
-            this.txtKullaniciAdi.Size = new System.Drawing.Size(100, 23);
-            this.txtKullaniciAdi.TabIndex = 3;
+            txtKullaniciAdi.Location = new Point(107, 235);
+            txtKullaniciAdi.Name = "txtKullaniciAdi";
+            txtKullaniciAdi.Size = new Size(100, 23);
+            txtKullaniciAdi.TabIndex = 3;
             // 
             // txtSifre
             // 
-            this.txtSifre.Location = new System.Drawing.Point(130, 326);
-            this.txtSifre.Name = "txtSifre";
-            this.txtSifre.Size = new System.Drawing.Size(100, 23);
-            this.txtSifre.TabIndex = 4;
+            txtSifre.Location = new Point(107, 308);
+            txtSifre.Name = "txtSifre";
+            txtSifre.Size = new Size(100, 23);
+            txtSifre.TabIndex = 4;
             // 
             // btnKaydet
             // 
-            this.btnKaydet.Location = new System.Drawing.Point(130, 386);
-            this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(75, 23);
-            this.btnKaydet.TabIndex = 5;
-            this.btnKaydet.Text = "Kaydet";
-            this.btnKaydet.UseVisualStyleBackColor = true;
-            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
+            btnKaydet.Location = new Point(107, 368);
+            btnKaydet.Name = "btnKaydet";
+            btnKaydet.Size = new Size(75, 23);
+            btnKaydet.TabIndex = 5;
+            btnKaydet.Text = "Kaydet";
+            btnKaydet.UseVisualStyleBackColor = true;
+            btnKaydet.Click += btnKaydet_Click;
             // 
             // Form3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 450);
-            this.Controls.Add(this.btnKaydet);
-            this.Controls.Add(this.txtSifre);
-            this.Controls.Add(this.txtKullaniciAdi);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtSoyad);
-            this.Controls.Add(this.txtAd);
-            this.Name = "Form3";
-            this.Text = "Form3";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(400, 450);
+            Controls.Add(btnKaydet);
+            Controls.Add(txtSifre);
+            Controls.Add(txtKullaniciAdi);
+            Controls.Add(txtEmail);
+            Controls.Add(txtSoyad);
+            Controls.Add(txtAd);
+            Name = "Form3";
+            Text = "Form3";
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        private void txtAd_TextChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

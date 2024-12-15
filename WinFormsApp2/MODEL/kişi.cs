@@ -6,22 +6,22 @@ using System.Threading.Tasks;
 
 namespace WinFormsApp2.MODEL
 {
-    public class kişi
+    public class kisi
     {
         public int kulid { get; set; }
         public string kulisim { get; set; }
-        public int kulşifre { get; set; }
+        public int kulsifre { get; set; }
         public string kuleposta { get; set; }
         
-        public kişi()
+        public kisi()
         {
             
         }
-        public kişi(int kulid,string kulisim, int kulşifre,string kuleposta)
+        public kisi(int kulid,string kulisim, int kulsifre,string kuleposta)
         {
             this.kulid = kulid;
             this.kulisim = kulisim;
-            this.kulşifre = kulşifre;
+            this.kulsifre = kulsifre;
             this.kuleposta = kuleposta;
            
         }
@@ -41,13 +41,13 @@ namespace WinFormsApp2.MODEL
         {
             return this.kulisim;
         }
-        public void setkulşifre(int kulşifre)
+        public void setkulsifre(int kulsifre)
         {
-            this.kulşifre = kulşifre;
+            this.kulsifre = kulsifre;
         }
-        public int getkulşifre()
+        public int getkulsifre()
         {
-            return this.kulşifre;
+            return this.kulsifre;
         }
         public void setkuleposta(string kuleposta)
         {
