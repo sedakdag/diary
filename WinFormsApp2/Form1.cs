@@ -18,7 +18,7 @@ namespace WinFormsApp2
 
         private void buttongrs_Click_1(object sender, EventArgs e)
         {
-            string kullanýcýadi = textBoxkullanýcý.Text;
+            string kullanýcýadi = textBoxkullanici.Text;
             int sifre;
 
             if (int.TryParse(textBoxsifre.Text, out sifre))
@@ -27,8 +27,8 @@ namespace WinFormsApp2
                 {
                     if (kullanýcýadi.ToLower() == Kisi.GetKullaniciAdi() && sifre == Kisi.GetSifre())
                     {
-                        Form2 form2 = new Form2();
-                        form2.Show();
+                        GirisSayfasi girisSayfasi = new GirisSayfasi();
+                        girisSayfasi.Show();
                         this.Hide();
                         return;
                     }
@@ -37,8 +37,8 @@ namespace WinFormsApp2
                 // Txt dosyasýndan kontrol et
                 if (ValidateLogin(kullanýcýadi, sifre))
                 {
-                    Form2 form2 = new Form2();
-                    form2.Show();
+                    GirisSayfasi girisSayfasi = new GirisSayfasi();
+                    girisSayfasi.Show();
                     this.Hide();
                 }
                 else
@@ -147,6 +147,35 @@ namespace WinFormsApp2
                 }
             }
             return false;
+        }
+
+        private void buttonKyt_Click_1(object sender, EventArgs e)
+        {
+            // Yeni bir Form3 örneði oluþtur
+            Form3 form3 = new Form3();
+
+            // Formu göster ve sonucu kontrol et
+            if (form3.ShowDialog() == DialogResult.OK)
+            {
+                // Kullanýcý bilgilerini al
+                string ad = form3.Ad;
+                string soyad = form3.Soyad;
+                string email = form3.Email;
+                string kullaniciAdi = form3.KullaniciAdi;
+                int sifre = form3.Sifre;
+
+                // Kullanýcý adý tekrar kontrolü
+                if (Kisilerim.Exists(k => k.GetKullaniciAdi() == kullaniciAdi))
+                {
+                    MessageBox.Show("Bu kullanýcý adý zaten kayýtlý!");
+                    return;
+                }
+
+                // Yeni kullanýcýyý ekle
+                Kisilerim.Add(new Kisi(Kisilerim.Count + 1, kullaniciAdi, sifre, email));
+                File.AppendAllText(filePath, $"{kullaniciAdi};{sifre}{Environment.NewLine}");
+                MessageBox.Show("Kayýt baþarýyla tamamlandý!");
+            }
         }
     }
 }

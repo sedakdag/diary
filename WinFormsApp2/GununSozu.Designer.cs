@@ -42,6 +42,9 @@
             pictureMutlu = new PictureBox();
             checkMutlu = new CheckBox();
             label1 = new Label();
+            buttonSozuGetir = new Button();
+            labelSoz = new Label();
+            labelYazar = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureUzgun).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureKizgin).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureSaskin).BeginInit();
@@ -174,12 +177,45 @@
             label1.TabIndex = 50;
             label1.Text = "Modunu Seç, Sözünü Gör!";
             // 
+            // buttonSozuGetir
+            // 
+            buttonSozuGetir.BackColor = Color.FromArgb(255, 128, 128);
+            buttonSozuGetir.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            buttonSozuGetir.Location = new Point(360, 297);
+            buttonSozuGetir.Name = "buttonSozuGetir";
+            buttonSozuGetir.Size = new Size(202, 61);
+            buttonSozuGetir.TabIndex = 51;
+            buttonSozuGetir.Text = "Sözü Göster";
+            buttonSozuGetir.UseVisualStyleBackColor = false;
+            buttonSozuGetir.Click += buttonSozuGetir_Click;
+            // 
+            // labelSoz
+            // 
+            labelSoz.AutoSize = true;
+            labelSoz.Font = new Font("Constantia", 16F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            labelSoz.Location = new Point(158, 412);
+            labelSoz.Name = "labelSoz";
+            labelSoz.Size = new Size(0, 39);
+            labelSoz.TabIndex = 52;
+            // 
+            // labelYazar
+            // 
+            labelYazar.AutoSize = true;
+            labelYazar.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            labelYazar.Location = new Point(360, 412);
+            labelYazar.Name = "labelYazar";
+            labelYazar.Size = new Size(0, 32);
+            labelYazar.TabIndex = 54;
+            // 
             // GununSozu
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 192, 192);
             ClientSize = new Size(976, 671);
+            Controls.Add(labelYazar);
+            Controls.Add(labelSoz);
+            Controls.Add(buttonSozuGetir);
             Controls.Add(label1);
             Controls.Add(labelUzgun);
             Controls.Add(labelKizgin);
@@ -219,5 +255,8 @@
         private PictureBox pictureMutlu;
         private CheckBox checkMutlu;
         private Label label1;
+        private Button buttonSozuGetir;
+        private Label labelSoz;
+        private Label labelYazar;
     }
 }

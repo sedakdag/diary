@@ -26,12 +26,16 @@ namespace WinFormsApp2
 
         private void buttonGununSozu_Click(object sender, EventArgs e)
         {
-
+            GununSozu gununSozu = new GununSozu();
+            gununSozu.Show();
+            this.Hide();
         }
 
         private void buttonToDoList_Click(object sender, EventArgs e)
         {
-
+            todolist todolist = new todolist();
+            todolist.Show();
+            this.Hide();
         }
 
         private void buttonGunlukSuIcme_Click(object sender, EventArgs e)
