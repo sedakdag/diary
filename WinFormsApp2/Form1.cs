@@ -55,18 +55,18 @@ namespace WinFormsApp2
 
         private void buttonkyt_Click(object sender, EventArgs e)
         {
-            // Yeni bir Form3 örneði oluþtur
-            Form3 form3 = new Form3();
+            // Yeni bir kayitol örneði oluþtur
+            kayitol kayitol = new kayitol();
 
             // Formu göster ve sonucu kontrol et
-            if (form3.ShowDialog() == DialogResult.OK)
+            if (kayitol.ShowDialog() == DialogResult.OK)
             {
                 // Kullanýcý bilgilerini al
-                string ad = form3.Ad;
-                string soyad = form3.Soyad;
-                string email = form3.Email;
-                string kullaniciAdi = form3.KullaniciAdi;
-                int sifre = form3.Sifre;
+                string ad = kayitol.Ad;
+                string soyad = kayitol.Soyad;
+                string email = kayitol.Email;
+                string kullaniciAdi = kayitol.KullaniciAdi;
+                int sifre = kayitol.Sifre;
 
                 // Kullanýcý adý tekrar kontrolü
                 if (Kisilerim.Exists(k => k.GetKullaniciAdi() == kullaniciAdi))
@@ -151,18 +151,18 @@ namespace WinFormsApp2
 
         private void buttonKyt_Click_1(object sender, EventArgs e)
         {
-            // Yeni bir Form3 örneði oluþtur
-            Form3 form3 = new Form3();
+            // Yeni bir kayitol örneði oluþtur
+            kayitol kayitol = new kayitol();
 
             // Formu göster ve sonucu kontrol et
-            if (form3.ShowDialog() == DialogResult.OK)
+            if (kayitol.ShowDialog() == DialogResult.OK)
             {
                 // Kullanýcý bilgilerini al
-                string ad = form3.Ad;
-                string soyad = form3.Soyad;
-                string email = form3.Email;
-                string kullaniciAdi = form3.KullaniciAdi;
-                int sifre = form3.Sifre;
+                string ad = kayitol.Ad;
+                string soyad = kayitol.Soyad;
+                string email = kayitol.Email;
+                string kullaniciAdi = kayitol.KullaniciAdi;
+                int sifre = kayitol.Sifre;
 
                 // Kullanýcý adý tekrar kontrolü
                 if (Kisilerim.Exists(k => k.GetKullaniciAdi() == kullaniciAdi))

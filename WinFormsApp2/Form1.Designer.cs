@@ -43,7 +43,7 @@ namespace WinFormsApp2
             textBoxkullanici.Location = new Point(175, 89);
             textBoxkullanici.Margin = new Padding(4, 3, 4, 3);
             textBoxkullanici.Name = "textBoxkullanici";
-            textBoxkullanici.Size = new Size(127, 33);
+            textBoxkullanici.Size = new Size(127, 25);
             textBoxkullanici.TabIndex = 1;
             // 
             // textBoxsifre
@@ -51,7 +51,7 @@ namespace WinFormsApp2
             textBoxsifre.Location = new Point(175, 138);
             textBoxsifre.Margin = new Padding(4, 3, 4, 3);
             textBoxsifre.Name = "textBoxsifre";
-            textBoxsifre.Size = new Size(127, 33);
+            textBoxsifre.Size = new Size(127, 25);
             textBoxsifre.TabIndex = 2;
             // 
             // labelkullanıcı
@@ -60,7 +60,7 @@ namespace WinFormsApp2
             labelkullanıcı.Location = new Point(58, 98);
             labelkullanıcı.Margin = new Padding(4, 0, 4, 0);
             labelkullanıcı.Name = "labelkullanıcı";
-            labelkullanıcı.Size = new Size(143, 26);
+            labelkullanıcı.Size = new Size(94, 17);
             labelkullanıcı.TabIndex = 2;
             labelkullanıcı.Text = "Kullanıcı adı";
             // 
@@ -70,7 +70,7 @@ namespace WinFormsApp2
             labelsifre.Location = new Point(58, 147);
             labelsifre.Margin = new Padding(4, 0, 4, 0);
             labelsifre.Name = "labelsifre";
-            labelsifre.Size = new Size(63, 26);
+            labelsifre.Size = new Size(41, 17);
             labelsifre.TabIndex = 2;
             labelsifre.Text = "Şifre";
             // 
@@ -105,7 +105,7 @@ namespace WinFormsApp2
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(14F, 26F);
+            AutoScaleDimensions = new SizeF(9F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(385, 271);
             Controls.Add(buttonKyt);

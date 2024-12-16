@@ -152,7 +152,7 @@
             label4.TabIndex = 6;
             label4.Text = "Şifre";
             // 
-            // Form3
+            // kayitol
             // 
             AutoScaleDimensions = new SizeF(9F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -171,9 +171,9 @@
             Controls.Add(btnKaydet);
             Font = new Font("Arial", 11.25F, FontStyle.Italic, GraphicsUnit.Point, 162);
             Margin = new Padding(4, 4, 4, 4);
-            Name = "Form3";
+            Name = "kayitol";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form3";
+            Text = "kayitol";
             ResumeLayout(false);
             PerformLayout();
         }
