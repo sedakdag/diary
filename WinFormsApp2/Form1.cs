@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
@@ -8,7 +8,7 @@ namespace WinFormsApp2
 {
     public partial class Form1 : Form
     {
-        List<kisi> kisilerim = new List<kisi>();
+        List<kişi> kişilerim = new List<kişi>();
         string filePath = "kullaniciBilgileri.txt";
 
         public Form1()
@@ -18,51 +18,82 @@ namespace WinFormsApp2
 
         private void buttongrs_Click_1(object sender, EventArgs e)
         {
-            string kullaniciadi = textBoxkullanici.Text;
+            string kullanıcıadi = textBoxkullanıcı.Text;
             int sifre;
 
             if (int.TryParse(textBoxsifre.Text, out sifre))
             {
-                foreach (kisi kisi in kisilerim)
+                foreach (kişi Kişi in kişilerim)
                 {
-                    if (kullaniciadi.ToLower() == kisi.getkulisim() && sifre == kisi.getkulsifre())
+                    if (kullanıcıadi.ToLower() == Kişi.getkulisim() && sifre == Kişi.getkulşifre())
                     {
-                        GirisSayfasi form2 = new GirisSayfasi();
+                        Form2 form2 = new Form2();
                         form2.Show();
                         this.Hide();
                         return;
                     }
                 }
 
-                // Txt dosyasÃ½ndan kontrol et
-                if (ValidateLogin(kullaniciadi, sifre))
+                // Txt dosyasından kontrol et
+                if (ValidateLogin(kullanıcıadi, sifre))
                 {
-                    GirisSayfasi form2 = new GirisSayfasi();
+                    Form2 form2 = new Form2();
                     form2.Show();
                     this.Hide();
                 }
                 else
                 {
-                    MessageBox.Show("KullanÄ±cÄ± adÄ± veya ÅŸifre hatalÄ±!");
+                    MessageBox.Show("Kullanıcı adı veya şifre hatalı!");
                 }
             }
             else
             {
-                MessageBox.Show("LÃ¼tfen geÃ§erli bir ÅŸifre giriniz!");
+                MessageBox.Show("Lütfen geçerli bir şifre giriniz!");
+            }
+        }
+
+
+        private void buttonkyt_Click(object sender, EventArgs e)
+        {
+            // Yeni bir Form3 örneği oluştur
+            Form3 form3 = new Form3();
+
+            // Formu göster ve sonucu kontrol et
+            if (form3.ShowDialog() == DialogResult.OK)
+            {
+                // Kullanıcı bilgilerini al
+                string ad = form3.Ad;
+                string soyad = form3.Soyad;
+                string email = form3.Email;
+                string kullaniciAdi = form3.KullaniciAdi;
+                int sifre = form3.Sifre;
+
+                // Kullanıcı adı tekrar kontrolü
+                if (kişilerim.Exists(k => k.getkulisim() == kullaniciAdi))
+                {
+                    MessageBox.Show("Bu kullanıcı adı zaten kayıtlı!");
+                    return;
+                }
+
+                // Yeni kullanıcıyı ekle
+                kişilerim.Add(new kişi(kişilerim.Count + 1, kullaniciAdi, sifre, email));
+                File.AppendAllText(filePath, $"{kullaniciAdi};{sifre}{Environment.NewLine}");
+                MessageBox.Show("Kayıt başarıyla tamamlandı!");
             }
         }
 
 
 
+
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Ã–nceden tanÃ½mlÃ½ kullanÃ½cÃ½lar
-            kisilerim.Add(new kisi(1, "sÃ½la", 123, "sila@gmail.com"));
-            kisilerim.Add(new kisi(2, "seda", 456, "seda@gmail.com"));
-            kisilerim.Add(new kisi(3, "dilara", 789, "dilara@gmail.com"));
-            kisilerim.Add(new kisi(4, "yaprak", 101, "yaprak@gmail.com"));
+            // Önceden tanımlı kullanıcılar
+            kişilerim.Add(new kişi(1, "sıla", 123, "sila@gmail.com"));
+            kişilerim.Add(new kişi(2, "seda", 456, "seda@gmail.com"));
+            kişilerim.Add(new kişi(3, "dilara", 789, "dilara@gmail.com"));
+            kişilerim.Add(new kişi(4, "yaprak", 101, "yaprak@gmail.com"));
 
-            // Txt dosyasÃ½ndan kullanÃ½cÃ½larÃ½ yÃ¼kle
+            // Txt dosyasından kullanıcıları yükle
             LoadUsersFromFile();
         }
 
@@ -79,7 +110,7 @@ namespace WinFormsApp2
                         string username = data[0];
                         if (int.TryParse(data[1], out int password))
                         {
-                            kisilerim.Add(new kisi(kisilerim.Count + 1, username, password, ""));
+                            kişilerim.Add(new kişi(kişilerim.Count + 1, username, password, ""));
                         }
                     }
                 }
@@ -116,35 +147,6 @@ namespace WinFormsApp2
                 }
             }
             return false;
-        }
-
-        private void buttonKyt_Click(object sender, EventArgs e)
-        {
-            // Yeni bir Form3 Ã¶rneÄŸi oluÅŸtur
-            Form3 form3 = new Form3();
-
-            // Formu gÃ¶ster ve sonucu kontrol et
-            if (form3.ShowDialog() == DialogResult.OK)
-            {
-                // KullanÄ±cÄ± bilgilerini al
-                string ad = form3.Ad;
-                string soyad = form3.Soyad;
-                string email = form3.Email;
-                string kullaniciAdi = form3.KullaniciAdi;
-                int sifre = form3.Sifre;
-
-                // KullanÄ±cÄ± adÄ± tekrar kontrolÃ¼
-                if (kiÅŸilerim.Exists(k => k.getkulisim() == kullaniciAdi))
-                {
-                    MessageBox.Show("Bu kullanÄ±cÄ± adÄ± zaten kayÄ±tlÄ±!");
-                    return;
-                }
-
-                // Yeni kullanÄ±cÄ±yÄ± ekle
-                kiÅŸilerim.Add(new kiÅŸi(kiÅŸilerim.Count + 1, kullaniciAdi, sifre, email));
-                File.AppendAllText(filePath, $"{kullaniciAdi};{sifre}{Environment.NewLine}");
-                MessageBox.Show("KayÄ±t baÅŸarÄ±yla tamamlandÄ±!");
-            }
         }
     }
 }

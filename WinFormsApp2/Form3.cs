@@ -26,6 +26,27 @@ namespace WinFormsApp2
             InitializeComponent(GetTxtAd());
         }
 
+        private object GetTxtAd()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Form3(IContainer components, TextBox txtAd, TextBox txtSoyad, TextBox txtEmail, TextBox txtKullaniciAdi, TextBox txtSifre, Button btnKaydet, string ad, string soyad, string email, string kullaniciAdi, int sifre)
+        {
+            this.components = components;
+            this.txtAd = txtAd;
+            this.txtSoyad = txtSoyad;
+            this.txtEmail = txtEmail;
+            this.txtKullaniciAdi = txtKullaniciAdi;
+            this.txtSifre = txtSifre;
+            this.btnKaydet = btnKaydet;
+            Ad = ad;
+            Soyad = soyad;
+            Email = email;
+            KullaniciAdi = kullaniciAdi;
+            Sifre = sifre;
+        }
+
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             // Girdi doğrulaması
