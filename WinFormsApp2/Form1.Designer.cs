@@ -29,29 +29,29 @@ namespace WinFormsApp2
         /// </summary>
         private void InitializeComponent()
         {
-            textBoxkullanıcı = new TextBox();
+            textBoxkullanici = new TextBox();
             textBoxsifre = new TextBox();
             labelkullanıcı = new Label();
             labelsifre = new Label();
             panel1 = new Panel();
             buttongrs = new Button();
-            buttonkyt = new Button();
+            buttonKyt = new Button();
             SuspendLayout();
             // 
-            // textBoxkullanıcı
+            // textBoxkullanici
             // 
-            textBoxkullanıcı.Location = new Point(175, 89);
-            textBoxkullanıcı.Margin = new Padding(4, 3, 4, 3);
-            textBoxkullanıcı.Name = "textBoxkullanıcı";
-            textBoxkullanıcı.Size = new Size(127, 25);
-            textBoxkullanıcı.TabIndex = 1;
+            textBoxkullanici.Location = new Point(175, 89);
+            textBoxkullanici.Margin = new Padding(4, 3, 4, 3);
+            textBoxkullanici.Name = "textBoxkullanici";
+            textBoxkullanici.Size = new Size(127, 33);
+            textBoxkullanici.TabIndex = 1;
             // 
             // textBoxsifre
             // 
             textBoxsifre.Location = new Point(175, 138);
             textBoxsifre.Margin = new Padding(4, 3, 4, 3);
             textBoxsifre.Name = "textBoxsifre";
-            textBoxsifre.Size = new Size(127, 25);
+            textBoxsifre.Size = new Size(127, 33);
             textBoxsifre.TabIndex = 2;
             // 
             // labelkullanıcı
@@ -60,7 +60,7 @@ namespace WinFormsApp2
             labelkullanıcı.Location = new Point(58, 98);
             labelkullanıcı.Margin = new Padding(4, 0, 4, 0);
             labelkullanıcı.Name = "labelkullanıcı";
-            labelkullanıcı.Size = new Size(94, 17);
+            labelkullanıcı.Size = new Size(143, 26);
             labelkullanıcı.TabIndex = 2;
             labelkullanıcı.Text = "Kullanıcı adı";
             // 
@@ -70,7 +70,7 @@ namespace WinFormsApp2
             labelsifre.Location = new Point(58, 147);
             labelsifre.Margin = new Padding(4, 0, 4, 0);
             labelsifre.Name = "labelsifre";
-            labelsifre.Size = new Size(41, 17);
+            labelsifre.Size = new Size(63, 26);
             labelsifre.TabIndex = 2;
             labelsifre.Text = "Şifre";
             // 
@@ -93,28 +93,28 @@ namespace WinFormsApp2
             buttongrs.UseVisualStyleBackColor = true;
             buttongrs.Click += buttongrs_Click_1;
             // 
-            // buttonkyt
+            // buttonKyt
             // 
-            buttonkyt.Location = new Point(181, 188);
-            buttonkyt.Name = "buttonkyt";
-            buttonkyt.Size = new Size(117, 32);
-            buttonkyt.TabIndex = 5;
-            buttonkyt.Text = "KAYIT OL";
-            buttonkyt.UseVisualStyleBackColor = true;
-            buttonkyt.Click += buttonkyt_Click;
+            buttonKyt.Location = new Point(185, 188);
+            buttonKyt.Name = "buttonKyt";
+            buttonKyt.Size = new Size(117, 32);
+            buttonKyt.TabIndex = 5;
+            buttonKyt.Text = "KAYIT OL";
+            buttonKyt.UseVisualStyleBackColor = true;
+            buttonKyt.Click += buttonKyt_Click;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(9F, 17F);
+            AutoScaleDimensions = new SizeF(14F, 26F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(385, 271);
-            Controls.Add(buttonkyt);
+            Controls.Add(buttonKyt);
             Controls.Add(buttongrs);
             Controls.Add(panel1);
             Controls.Add(labelsifre);
             Controls.Add(labelkullanıcı);
             Controls.Add(textBoxsifre);
-            Controls.Add(textBoxkullanıcı);
+            Controls.Add(textBoxkullanici);
             Font = new Font("Arial", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 162);
             Margin = new Padding(4, 3, 4, 3);
             Name = "Form1";
@@ -131,12 +131,12 @@ namespace WinFormsApp2
         }
 
 #endregion
-        private TextBox textBoxkullanıcı;
+        private TextBox textBoxkullanici;
         private TextBox textBoxsifre;
         private Label labelkullanıcı;
         private Label labelsifre;
         private Panel panel1;
         private Button buttongrs;
-        private Button buttonkyt;
+        private Button buttonKyt;
     }
 }
