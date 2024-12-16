@@ -101,7 +101,7 @@ namespace WinFormsApp2
             buttonKyt.TabIndex = 5;
             buttonKyt.Text = "KAYIT OL";
             buttonKyt.UseVisualStyleBackColor = true;
-            buttonKyt.Click += buttonKyt_Click;
+            buttonKyt.Click += buttonKyt_Click_1;
             // 
             // Form1
             // 
