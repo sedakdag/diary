@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WinFormsApp2
 {
-    public partial class Form2 : Form
+    public partial class profilsayfasi : Form
     {
-        public Form2()
+        public profilsayfasi()
         {
             InitializeComponent();
         }
@@ -45,6 +45,7 @@ namespace WinFormsApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             GunlukGirdiler gunlukGirdiler = new GunlukGirdiler();
             gunlukGirdiler.Show();
             this.Hide();
@@ -52,7 +53,9 @@ namespace WinFormsApp2
 
         private void buttontodo_Click(object sender, EventArgs e)
         {
-
+            todolist xtodo = new todolist();
+            xtodo.Show();
+            this.Hide();
         }
     }
 }

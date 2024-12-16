@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace WinFormsApp2
 {
-    public partial class Form3 : Form
+    public partial class kayitol : Form
     {
         private System.Windows.Forms.Label lblAdBilgi;
         public string Ad { get; private set; }
@@ -22,7 +22,7 @@ namespace WinFormsApp2
         public string KullaniciAdi { get; private set; }
         public int Sifre { get; private set; }
 
-        public Form3()
+        public kayitol()
         {
             InitializeComponent();
         }
@@ -33,7 +33,7 @@ namespace WinFormsApp2
         }
 
 
-        public Form3(IContainer components, TextBox txtAd, TextBox txtSoyad, TextBox txtEmail, TextBox txtKullaniciAdi, TextBox txtSifre, Button btnKaydet, string ad, string soyad, string email, string kullaniciAdi, int sifre)
+        public kayitol(IContainer components, TextBox txtAd, TextBox txtSoyad, TextBox txtEmail, TextBox txtKullaniciAdi, TextBox txtSifre, Button btnKaydet, string ad, string soyad, string email, string kullaniciAdi, int sifre)
         {
             this.components = components;
             this.txtAd = txtAd;

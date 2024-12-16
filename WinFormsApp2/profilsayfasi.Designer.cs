@@ -1,7 +1,7 @@
 ﻿
 namespace WinFormsApp2
 {
-    partial class Form2
+    partial class profilsayfasi
     {
         /// <summary>
         /// Required designer variable.
@@ -189,7 +189,7 @@ namespace WinFormsApp2
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // Form2
+            // profilsayfasi
             // 
             AutoScaleDimensions = new SizeF(10F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -209,18 +209,25 @@ namespace WinFormsApp2
             Controls.Add(buttongunlukgirdi);
             Font = new Font("Arial", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 162);
             Margin = new Padding(4);
-            Name = "Form2";
+            Name = "profilsayfasi";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "PROFİL SAYFASI";
+            Load += this.profilsayfasi_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
         }
 
+        private void profilsayfasi_Load(object sender, EventArgs e)
+        {
+           
+        }
+
         private void buttongunlukgirdi_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+         
         }
+       
 
         #endregion
 

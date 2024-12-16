@@ -1,3 +1,2 @@
-2024/12/16-09:53:01.408 43d4 Reusing MANIFEST C:\Users\pc\diary\WinFormsApp2\bin\Debug\net8.0-windows\WinFormsApp2.exe.WebView2\EBWebView\Default\Session Storage/MANIFEST-000001
-2024/12/16-09:53:01.409 43d4 Recovering log #3
-2024/12/16-09:53:01.410 43d4 Reusing old log C:\Users\pc\diary\WinFormsApp2\bin\Debug\net8.0-windows\WinFormsApp2.exe.WebView2\EBWebView\Default\Session Storage/000003.log 
+2024/12/16-10:13:11.477 4d0c Creating DB C:\Users\pc\diary\WinFormsApp2\bin\Debug\net8.0-windows\WinFormsApp2.exe.WebView2\EBWebView\Default\Session Storage since it was missing.
+2024/12/16-10:13:11.483 4d0c Reusing MANIFEST C:\Users\pc\diary\WinFormsApp2\bin\Debug\net8.0-windows\WinFormsApp2.exe.WebView2\EBWebView\Default\Session Storage/MANIFEST-000001

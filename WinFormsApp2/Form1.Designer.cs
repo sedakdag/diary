@@ -125,6 +125,11 @@ namespace WinFormsApp2
             PerformLayout();
         }
 
+        private void buttonKyt_Click(object sender, EventArgs e)
+        {
+           
+        }
+
         private void buttongrs_Click(object sender, EventArgs e)
         {
            

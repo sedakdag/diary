@@ -27,7 +27,7 @@ namespace WinFormsApp2
                 {
                     if (kullanýcýadi.ToLower() == Kisi.GetKullaniciAdi() && sifre == Kisi.GetSifre())
                     {
-                        Form2 form2 = new Form2();
+                        profilsayfasi form2 = new profilsayfasi();
                         form2.Show();
                         this.Hide();
                         return;
@@ -37,7 +37,7 @@ namespace WinFormsApp2
                 // Txt dosyasýndan kontrol et
                 if (ValidateLogin(kullanýcýadi, sifre))
                 {
-                    Form2 form2 = new Form2();
+                    profilsayfasi form2 = new profilsayfasi();
                     form2.Show();
                     this.Hide();
                 }
@@ -56,7 +56,7 @@ namespace WinFormsApp2
         private void buttonkyt_Click(object sender, EventArgs e)
         {
             // Yeni bir Form3 örneði oluþtur
-            Form3 form3 = new Form3();
+            kayitol form3 = new kayitol();
 
             // Formu göster ve sonucu kontrol et
             if (form3.ShowDialog() == DialogResult.OK)

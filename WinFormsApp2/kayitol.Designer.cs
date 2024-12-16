@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp2
 {
-    partial class Form3
+    partial class kayitol
     {
         /// <summary>
         /// Required designer variable.
