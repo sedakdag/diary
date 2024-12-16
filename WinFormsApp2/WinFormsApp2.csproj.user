@@ -23,5 +23,8 @@
     <Compile Update="GununSozu.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="soz.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

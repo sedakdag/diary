@@ -74,6 +74,7 @@ namespace WinFormsApp2
             buttontodo.TabIndex = 0;
             buttontodo.Text = "To-Do List Kaydı";
             buttontodo.UseVisualStyleBackColor = false;
+            buttontodo.Click += buttontodo_Click;
             // 
             // buttongunluksu
             // 
@@ -179,12 +180,13 @@ namespace WinFormsApp2
             // 
             button1.AllowDrop = true;
             button1.AutoEllipsis = true;
-            button1.Location = new Point(222, 105);
+            button1.BackColor = Color.LavenderBlush;
+            button1.Location = new Point(163, 106);
             button1.Name = "button1";
-            button1.Size = new Size(180, 57);
+            button1.Size = new Size(266, 56);
             button1.TabIndex = 4;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            button1.Text = "Günlük";
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // Form2

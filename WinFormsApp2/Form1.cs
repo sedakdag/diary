@@ -8,7 +8,7 @@ namespace WinFormsApp2
 {
     public partial class Form1 : Form
     {
-        List<kiþi> kiþilerim = new List<kiþi>();
+        List<Kisi> Kisilerim = new List<Kisi>();
         string filePath = "kullaniciBilgileri.txt";
 
         public Form1()
@@ -23,9 +23,9 @@ namespace WinFormsApp2
 
             if (int.TryParse(textBoxsifre.Text, out sifre))
             {
-                foreach (kiþi Kiþi in kiþilerim)
+                foreach (Kisi Kisi in Kisilerim)
                 {
-                    if (kullanýcýadi.ToLower() == Kiþi.getkulisim() && sifre == Kiþi.getkulþifre())
+                    if (kullanýcýadi.ToLower() == Kisi.GetKullaniciAdi() && sifre == Kisi.GetSifre())
                     {
                         Form2 form2 = new Form2();
                         form2.Show();
@@ -69,14 +69,14 @@ namespace WinFormsApp2
                 int sifre = form3.Sifre;
 
                 // Kullanýcý adý tekrar kontrolü
-                if (kiþilerim.Exists(k => k.getkulisim() == kullaniciAdi))
+                if (Kisilerim.Exists(k => k.GetKullaniciAdi() == kullaniciAdi))
                 {
                     MessageBox.Show("Bu kullanýcý adý zaten kayýtlý!");
                     return;
                 }
 
                 // Yeni kullanýcýyý ekle
-                kiþilerim.Add(new kiþi(kiþilerim.Count + 1, kullaniciAdi, sifre, email));
+                Kisilerim.Add(new Kisi(Kisilerim.Count + 1, kullaniciAdi, sifre, email));
                 File.AppendAllText(filePath, $"{kullaniciAdi};{sifre}{Environment.NewLine}");
                 MessageBox.Show("Kayýt baþarýyla tamamlandý!");
             }
@@ -88,10 +88,10 @@ namespace WinFormsApp2
         private void Form1_Load(object sender, EventArgs e)
         {
             // Önceden tanýmlý kullanýcýlar
-            kiþilerim.Add(new kiþi(1, "sýla", 123, "sila@gmail.com"));
-            kiþilerim.Add(new kiþi(2, "seda", 456, "seda@gmail.com"));
-            kiþilerim.Add(new kiþi(3, "dilara", 789, "dilara@gmail.com"));
-            kiþilerim.Add(new kiþi(4, "yaprak", 101, "yaprak@gmail.com"));
+            Kisilerim.Add(new Kisi(1, "sýla", 123, "sila@gmail.com"));
+            Kisilerim.Add(new Kisi(2, "seda", 456, "seda@gmail.com"));
+            Kisilerim.Add(new Kisi(3, "dilara", 789, "dilara@gmail.com"));
+            Kisilerim.Add(new Kisi(4, "yaprak", 101, "yaprak@gmail.com"));
 
             // Txt dosyasýndan kullanýcýlarý yükle
             LoadUsersFromFile();
@@ -110,7 +110,7 @@ namespace WinFormsApp2
                         string username = data[0];
                         if (int.TryParse(data[1], out int password))
                         {
-                            kiþilerim.Add(new kiþi(kiþilerim.Count + 1, username, password, ""));
+                            Kisilerim.Add(new Kisi(Kisilerim.Count + 1, username, password, ""));
                         }
                     }
                 }

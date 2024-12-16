@@ -15,6 +15,7 @@ namespace WinFormsApp2
 {
     public partial class Form3 : Form
     {
+        private System.Windows.Forms.Label lblAdBilgi;
         public string Ad { get; private set; }
         public string Soyad { get; private set; }
         public string Email { get; private set; }
@@ -23,13 +24,14 @@ namespace WinFormsApp2
 
         public Form3()
         {
-            InitializeComponent(GetTxtAd());
+            InitializeComponent();
         }
 
         private object GetTxtAd()
         {
-            throw new NotImplementedException();
+            return txtAd; // txtAd bir TextBox kontrolü.
         }
+
 
         public Form3(IContainer components, TextBox txtAd, TextBox txtSoyad, TextBox txtEmail, TextBox txtKullaniciAdi, TextBox txtSifre, Button btnKaydet, string ad, string soyad, string email, string kullaniciAdi, int sifre)
         {

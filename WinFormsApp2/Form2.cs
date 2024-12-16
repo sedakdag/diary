@@ -38,7 +38,9 @@ namespace WinFormsApp2
 
         private void buttongununsozu_Click(object sender, EventArgs e)
         {
-
+            soz Soz = new soz();
+            Soz.Show();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -46,6 +48,11 @@ namespace WinFormsApp2
             GunlukGirdiler gunlukGirdiler = new GunlukGirdiler();
             gunlukGirdiler.Show();
             this.Hide();
+        }
+
+        private void buttontodo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
