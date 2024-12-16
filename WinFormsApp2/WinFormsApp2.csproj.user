@@ -26,5 +26,8 @@
     <Compile Update="soz.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="todolist.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
